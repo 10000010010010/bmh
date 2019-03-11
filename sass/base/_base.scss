@@ -15,23 +15,27 @@ html {
     color: #222;
     box-sizing: border-box;
     margin: 0.5rem 0.5rem 0 0.5rem;
-
+    ///////////////////////////////////////////////
     .header {
       position: relative;
+      ////////////////////////////////////////////
       .menu-icon {
         position: absolute;
         z-index: 1;
 
-        right: -50;
-        width: 6rem;
-        height: 6rem;
+        width: 80vw;
+        height: 60vh;
         background-image: linear-gradient(
           to top,
           $primary-color-hsla,
           $secondary-color-hsla
         );
+        @media all and (orientation: landscape) {
+          width: 98vw;
+        }
 
         color: black;
+        ///////////////////////////////////////////////
         &.icons {
           background-color: black;
           width: 2rem;
@@ -40,20 +44,32 @@ html {
         }
       }
     }
+    ///////////////////////////////////////////////
     .hero {
       position: relative;
+      ///////////////////////////////////////////////
+      .rectangle-border {
+        width: 97vw;
+        height: 168.5vw;
+        position: absolute;
+        top: 0;
+        z-index: 6;
+        border: 3rem solid $primary-color-hsla;
+      }
+      ///////////////////////////////////////////////
       .triangle-overlay {
         width: 100%;
         height: 95vh;
         position: absolute;
         z-index: 1;
         background: linear-gradient(
-          to bottom,
+          to top,
           $primary-color-hsla,
           $secondary-color-hsla
         );
         clip-path: polygon(100% 0%, 100% 100%, 0% 95vh);
       }
+      ///////////////////////////////////////////////
       &__background {
         position: relative;
         height: 95vh;
@@ -70,12 +86,18 @@ html {
           url(../img/bmh001.jpg);
         background-size: cover;
         background-position: center;
-        clip-path: polygon(0 10%, 20% 0, 100% 0%, 100% 70%, 0 100%, 0 100%);
+        clip-path: polygon(0 50%, 50% 0, 100% 0%, 100% 50%, 50% 100%, 0 100%);
+        @media all and (orientation: landscape) {
+          clip-path: polygon(0 25%, 100% 0, 100% 0%, 100% 75%, 0% 100%, 0 100%);
+        }
+        ///////////////////////////////////////////////
         .logo-img {
-          position: absolute;
-          z-index: 100;
-          padding: 0.1rem;
-          width: 70vw;
+          z-index: 5;
+          width: 100vw;
+
+          @media all and (orientation: landscape) {
+            width: 65vw;
+          }
         }
       }
     }
