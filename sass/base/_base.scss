@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  body {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #222;
+    box-sizing: border-box;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+
+    .header {
+      position: relative;
+      .menu-icon {
+        position: absolute;
+        z-index: 1;
+
+        right: -50;
+        width: 6rem;
+        height: 6rem;
+        background-image: linear-gradient(
+          to top,
+          $primary-color-hsla,
+          $secondary-color-hsla
+        );
+
+        color: black;
+        &.icons {
+          background-color: black;
+          width: 2rem;
+          height: 1rem;
+          margin: 1rem 0;
+        }
+      }
+    }
+    .hero {
+      position: relative;
+      .triangle-overlay {
+        width: 100%;
+        height: 95vh;
+        position: absolute;
+        z-index: 1;
+        background: linear-gradient(
+          to bottom,
+          $primary-color-hsla,
+          $secondary-color-hsla
+        );
+        clip-path: polygon(100% 0%, 100% 100%, 0% 95vh);
+      }
+      &__background {
+        position: relative;
+        height: 95vh;
+        display: flex;
+        z-index: 4;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(
+            to top,
+            $primary-color-hsla,
+            $secondary-color-hsla
+          ),
+          url(../img/bmh001.jpg);
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0 10%, 20% 0, 100% 0%, 100% 70%, 0 100%, 0 100%);
+        .logo-img {
+          position: absolute;
+          z-index: 100;
+          padding: 0.1rem;
+          width: 70vw;
+        }
+      }
+    }
+  }
+}
