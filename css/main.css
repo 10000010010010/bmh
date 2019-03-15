@@ -153,11 +153,11 @@ html body .hero__background {
 }
 html body .hero__background .logo-img {
   z-index: 5;
-  width: 100vw;
+  max-width: 32rem;
 }
-@media all and (orientation: landscape) {
+@media all and (max-width: 32rem) {
   html body .hero__background .logo-img {
-    width: 65vw;
+    width: 100vw;
   }
 }
 

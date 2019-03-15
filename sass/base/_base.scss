@@ -93,10 +93,10 @@ html {
         ///////////////////////////////////////////////
         .logo-img {
           z-index: 5;
-          width: 100vw;
+          max-width: 32rem;
 
-          @media all and (orientation: landscape) {
-            width: 65vw;
+          @media all and (max-width: 32rem) {
+            width: 100vw;
           }
         }
       }
