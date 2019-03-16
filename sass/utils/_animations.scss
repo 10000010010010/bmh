@@ -1,0 +1,19 @@
+@keyframes icon-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(90deg);
+  }
+}
+
+@keyframes icon-rotate-reverse {
+  0% {
+    transform: rotateZ(90deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}

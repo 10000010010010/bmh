@@ -1,3 +1,19 @@
+@keyframes icon-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(90deg);
+  }
+}
+@keyframes icon-rotate-reverse {
+  0% {
+    transform: rotateZ(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
 /*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
 /* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
@@ -95,15 +111,49 @@ html body {
 
 .header {
   position: relative;
+  width: 100%;
 }
 
 .menu-icon {
-  width: 10rem;
-  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem;
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   z-index: 5;
   border-radius: 50%;
+  animation-name: icon-rotate-reverse;
+  animation-duration: 0.2s;
+}
+.menu-icon__stripe1 {
+  flex: 0 1 auto;
+  background-color: white;
+  margin-bottom: 0.5rem;
+  width: 2rem;
+  height: 0.3rem;
+  border-radius: 1rem;
+}
+.menu-icon__stripe2 {
+  background-color: white;
+  width: 3rem;
+  height: 0.3rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+}
+.menu-icon__stripe3 {
+  background-color: white;
+  width: 2rem;
+  height: 0.3rem;
+  border-radius: 1rem;
+}
+.menu-icon:hover {
+  animation-name: icon-rotate;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .hero {
