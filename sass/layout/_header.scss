@@ -1,4 +1,11 @@
 .header {
   position: relative;
   width: 100%;
+  .toggleMenu {
+    visibility: visible;
+  }
+
+  a:active {
+    transform: rotateZ(90deg);
+  }
 }

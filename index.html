@@ -9,7 +9,10 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
     <!-- Place favicon.ico in the root directory -->
-
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
 
@@ -26,17 +29,20 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
     <header class="header">
-      <nav class="menu-icon">
-        <div class="menu-icon__stripe1"></div>
-        <div class="menu-icon__stripe2"></div>
-        <div class="menu-icon__stripe3"></div>
-      </nav>
-      <nav class="navbar">
-        <div class="navbar__items">
-          <div class="navbar__item"></div>
-          <div class="navbar__item"></div>
-          <div class="navbar__item"></div>
+      <div class="hidden"></div>
+      <a href="#"
+        ><nav class="menu-icon">
+          <div class="menu-icon__stripe1"></div>
+          <div class="menu-icon__stripe2"></div>
+          <div class="menu-icon__stripe3"></div></nav
+      ></a>
+      <nav class="navmenu">
+        <div class="navmenu__items">
+          <div class="navmenu__item">home</div>
+          <div class="navmenu__item">foto's</div>
+          <div class="navmenu__item">contact</div>
         </div>
       </nav>
     </header>
@@ -71,7 +77,7 @@
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
+    <!-- <script>
       window.ga = function() {
         ga.q.push(arguments);
       };
@@ -84,6 +90,6 @@
       src="https://www.google-analytics.com/analytics.js"
       async
       defer
-    ></script>
+    ></script> -->
   </body>
 </html>
