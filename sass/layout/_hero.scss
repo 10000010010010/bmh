@@ -72,10 +72,13 @@
     .logo-img {
       z-index: 5;
       max-width: 32rem;
-
       @media all and (max-width: 32rem) {
         width: 100vw;
       }
     }
+  }
+
+  .toggleImg {
+    visibility: hidden;
   }
 }
