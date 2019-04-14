@@ -1,15 +1,19 @@
 .navmenu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 15%);
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 5;
   visibility: hidden;
 
   &__items {
-    border-radius: 1rem;
-    height: 75vh;
-    background-color: rgba($color: #000000, $alpha: 0.7);
+    height: 100vh;
+    width: 100vw;
+    // background-color: rgba($color: #000000, $alpha: 0.7);
+    background: linear-gradient(
+      to top,
+      hsla(214, 100%, 49%, 1),
+      hsla(174, 100%, 26%, 1)
+    );
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -17,12 +21,14 @@
     align-items: center;
     justify-items: center;
     font-size: 2rem;
-    width: 75vw;
+    &__item {
+      color: black;
+    }
   }
   &__items a:link,
   :visited {
     list-style: none;
     text-decoration: none;
-    color: $secondary-color;
+    color: #333;
   }
 }

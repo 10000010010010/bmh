@@ -28,23 +28,27 @@
 
     <!-- Add your site or application content here -->
 
-    <header class="header">
-      <a href="#"
-        ><nav class="menu-icon">
+    <header class="header" id="home">
+      <nav class="menu-icon">
           <div class="menu-icon__stripe1"></div>
           <div class="menu-icon__stripe2"></div>
           <div class="menu-icon__stripe3"></div></nav
-      ></a>
+      >
       <nav class="navmenu">
         <ul class="navmenu__items">
-          <a href="#">
-            <li class="navmenu__item">home</li>
+          <a href="#home">
+            <li class="navmenu__item">Home</li>
+            <hr />
+            <a href="#info">
+              <li class="navmenu__item">Info</li>
+              <hr />
           </a>
-          <a href="#">
-            <li class="navmenu__item">foto's</li>
+          <a href="#media">
+            <li class="navmenu__item">Media</li>
+            <hr />
           </a>
-          <a href="#">
-            <li class="navmenu__item">contact</li>
+          <a href="#footer">
+            <li class="navmenu__item">Contact</li>
           </a>
         </ul>
       </nav>
@@ -63,6 +67,44 @@
         />
       </div>
     </section>
+
+    <section id="info">
+      <h1 class="title">U wijst, wij boren!</h1>
+      <p>
+        B.M.H. Diamanttechniek is een jong en dynamisch bedrijf dat zich richt
+        op het bewerken van hard materiaal, het boren van gaten, het maken van
+        sleuven en andere diamantbewerkingen naar uw wens.
+      </p>
+      <hr>
+      <p>
+        Kortom, wij zijn experts op het gebied van diamantbewerkingen en
+        allround werkzaamheden voor uw project.
+      </p>
+      <hr>
+      <p>
+        Tevens is B.M.H. Diamanttechniek gericht op het aanleggen van elektra,
+        aanvoer en afvoer van water voor uw project. Er is geen uitdaging te
+        groot voor ons.
+      </p>
+    </section>
+
+    <secion id="media">
+      <div class="fotos">
+        <h1>hier komen de foto's</h1>
+      </div>
+    </secion>
+
+    <footer id="footer">
+      <div class="footer_items">
+<h3>B.M.H. Diamanttechniek</h3>
+<p>Roosstraat 156 &bull; 3333 SN &bull; Zwijndrecht</p> <p>0618590019</p>
+  <p>KvK: 73700282</p>
+  <div class="copy">
+    &copy;
+    <script>document.write(new Date().getFullYear());</script>
+  </div>
+      </div>
+    </footer>
 
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script
@@ -94,5 +136,5 @@
       async
       defer
     ></script> -->
-  </body>
+  </bod>
 </html>

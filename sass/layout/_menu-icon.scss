@@ -5,16 +5,22 @@
   align-items: center;
   width: 4rem;
   height: 4rem;
-  margin: 2rem;
+  margin: 1rem;
   background-color: rgba($color: #000000, $alpha: 0.4);
-  position: absolute;
   z-index: 6;
   border-radius: 50%;
-  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   // reverse rotating menu-icon:
   animation-name: icon-rotate-reverse;
   animation-duration: 0.2s;
+
+  // animation-name: icon-vanish;
+  // animation-duration: 3s;
+  // animation-direction: reverse;
+  // animation-fill-mode: forwards;
 
   &__stripe1 {
     flex: 0 1 auto;
@@ -44,5 +50,15 @@
     animation-name: icon-rotate;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
+  }
+
+  &:link,
+  :visited {
+    animation: icon-rotate;
+    animation-duration: 1s;
+  }
+
+  @media all and (orientation: landscape) {
+    position: fixed;
   }
 }
