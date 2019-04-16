@@ -6,4 +6,30 @@
   color: white;
   text-align: center;
   font-size: 1.5rem;
+  .footer-items a {
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(84, 107, 138), rgb(77, 114, 111));
+    color: black;
+    border-radius: 5%;
+    padding: 0.3rem;
+  }
+  @media all and (orientation: landscape) {
+    .footer-items {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .copy {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    text-align: center;
+    background: white;
+    color: black;
+    padding: 0 0.3rem;
+    border-radius: 5%;
+    margin-bottom: 0.2rem;
+  }
 }

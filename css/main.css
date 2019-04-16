@@ -116,7 +116,6 @@ html body {
   line-height: 1.7;
   color: #222;
   box-sizing: border-box;
-  margin: 0.5rem;
 }
 html body hr {
   border: 0;
@@ -217,6 +216,7 @@ html body hr {
 
 .hero {
   position: relative;
+  width: 100vw;
 }
 .hero .rectangle-border {
   width: 97vw;
@@ -284,6 +284,9 @@ html body hr {
   visibility: hidden;
 }
 
+#info {
+  width: 100%;
+}
 #info .title {
   text-align: center;
   color: #333;
@@ -294,13 +297,28 @@ html body hr {
 }
 
 .fotos {
-  background: #006af5;
-  width: 97vw;
-  height: 50vh;
+  background-color: #008577;
+  padding-bottom: 2rem;
   text-align: center;
-  margin: 0.5rem;
-  position: relative;
-  left: -0.5rem;
+  background: linear-gradient(to right bottom, rgba(0, 108, 250, 0), #5170b1);
+}
+@media all and (orientation: landscape) {
+  .fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media all and (min-width: 960px) {
+  .fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.fotos img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 #footer {
@@ -311,6 +329,32 @@ html body hr {
   color: white;
   text-align: center;
   font-size: 1.5rem;
+}
+#footer .footer-items a {
+  text-decoration: none;
+  background: linear-gradient(to right, #546b8a, #4d726f);
+  color: black;
+  border-radius: 5%;
+  padding: 0.3rem;
+}
+@media all and (orientation: landscape) {
+  #footer .footer-items {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#footer .copy {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: center;
+  background: white;
+  color: black;
+  padding: 0 0.3rem;
+  border-radius: 5%;
+  margin-bottom: 0.2rem;
 }
 
 /* ==========================================================================

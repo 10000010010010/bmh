@@ -14,7 +14,3 @@ menuLinks.addEventListener("click", function toggleMenu() {
   menu.classList.toggle("toggleMenu");
   logoimg.classList.toggle("toggleImg");
 });
-
-window.addEventListener("scroll", function scrollIcon() {
-  toggle.classList.toggle("toggleMenu");
-});

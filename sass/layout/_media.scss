@@ -1,9 +1,26 @@
 .fotos {
-  background: $primary-color;
-  width: 97vw;
-  height: 50vh;
+  background-color: $secondary-color;
+  padding-bottom: 2rem;
   text-align: center;
-  margin: 0.5rem;
-  position: relative;
-  left: -0.5rem;
+  background: linear-gradient(
+    to right bottom,
+    hsla(214, 100%, 49%, 0),
+    rgb(81, 112, 177)
+  );
+  @media all and (orientation: landscape) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  @media all and (min-width: 960px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
