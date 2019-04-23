@@ -9,11 +9,9 @@
     height: 100vh;
     width: 100vw;
     // background-color: rgba($color: #000000, $alpha: 0.7);
-    background: linear-gradient(
-      to top,
+    background: linear-gradient(to top,
       hsla(214, 100%, 49%, 1),
-      hsla(174, 100%, 26%, 1)
-    );
+      hsla(174, 100%, 26%, 1));
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -21,10 +19,12 @@
     align-items: center;
     justify-items: center;
     font-size: 2rem;
+
     &__item {
       color: black;
     }
   }
+
   &__items a:link,
   :visited {
     list-style: none;

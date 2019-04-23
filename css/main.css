@@ -216,7 +216,7 @@ html body hr {
 
 .hero {
   position: relative;
-  width: 100vw;
+  min-width: 100vw;
 }
 .hero .rectangle-border {
   width: 97vw;
@@ -232,7 +232,6 @@ html body hr {
   position: absolute;
   z-index: 1;
   background: linear-gradient(to top, rgba(0, 108, 250, 0.7), rgba(0, 133, 119, 0.7));
-  clip-path: polygon(100% 0%, 100% 100%, 0% 95vh);
 }
 .hero .triangle-overlay2 {
   position: absolute;
@@ -244,7 +243,7 @@ html body hr {
 }
 @media all and (orientation: landscape) {
   .hero .triangle-overlay2 {
-    width: 98vw;
+    width: 100vw;
   }
 }
 .hero .triangle-overlay2.icons {
@@ -273,11 +272,51 @@ html body hr {
 }
 .hero__background .logo-img {
   z-index: 5;
-  max-width: 32rem;
+  max-width: 50rem;
 }
 @media all and (max-width: 32rem) {
   .hero__background .logo-img {
     width: 100vw;
+  }
+}
+@media all and (max-width: 32rem), (min-height: 300px) {
+  .hero__background .logo-img {
+    width: 100vw;
+  }
+}
+@media all and (min-width: 500px), (min-height: 300px) {
+  .hero__background .logo-img {
+    max-width: 60rem;
+  }
+}
+@media all and (min-width: 600px), (min-height: 300px) {
+  .hero__background .logo-img {
+    max-width: 70rem;
+  }
+}
+@media all and (min-width: 700px), (min-height: 300px) {
+  .hero__background .logo-img {
+    max-width: 80rem;
+  }
+}
+@media all and (max-width: 300px), (max-height: 300px) {
+  .hero__background .logo-img {
+    max-width: 60rem;
+  }
+}
+@media all and (max-width: 300px), (max-height: 400px) {
+  .hero__background .logo-img {
+    max-width: 70rem;
+  }
+}
+@media all and (max-width: 300px), (max-height: 500px) {
+  .hero__background .logo-img {
+    max-width: 80rem;
+  }
+}
+@media all and (max-width: 300px), (max-height: 600px) {
+  .hero__background .logo-img {
+    max-width: 40rem;
   }
 }
 .hero .toggleImg {
@@ -294,6 +333,34 @@ html body hr {
 #info p {
   color: #333;
   text-align: center;
+  margin: 3rem;
+}
+@media all and (min-width: 478px) {
+  #info p {
+    max-width: 418px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 960px) {
+  #info p {
+    padding-right: 1.6rem;
+    text-align: left;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+  }
+  #info p:not(:last-child) {
+    border-right: 0.3rem solid #4443b6;
+  }
+}
+@media all and (min-width: 960px) {
+  #info .pbox {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #info .pbox hr {
+    display: none;
+  }
 }
 
 .fotos {
@@ -319,6 +386,8 @@ html body hr {
   width: 100%;
   height: auto;
   object-fit: contain;
+  margin: auto 0;
+  padding: 1rem;
 }
 
 #footer {
@@ -330,18 +399,22 @@ html body hr {
   text-align: center;
   font-size: 1.5rem;
 }
+#footer a:visited,
+#footer :active {
+  color: white;
+  cursor: pointer;
+}
 #footer .footer-items a {
   text-decoration: none;
-  background: linear-gradient(to right, #546b8a, #4d726f);
-  color: black;
-  border-radius: 5%;
-  padding: 0.3rem;
+  padding: 0.2rem;
+  text-decoration: none;
+  color: white;
 }
 @media all and (orientation: landscape) {
   #footer .footer-items {
     margin-top: 1rem;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -354,7 +427,7 @@ html body hr {
   color: black;
   padding: 0 0.3rem;
   border-radius: 5%;
-  margin-bottom: 0.2rem;
+  margin: 0.2rem 0.2rem;
 }
 
 /* ==========================================================================

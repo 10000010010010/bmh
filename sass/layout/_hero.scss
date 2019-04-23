@@ -16,37 +16,10 @@
     height: 95vh;
     position: absolute;
     z-index: 1;
-    background: linear-gradient(
-      to top,
+    background: linear-gradient(to top,
       $primary-color-hsla,
-      $secondary-color-hsla
-    );
+      $secondary-color-hsla);
     clip-path: polygon(100% 0%, 100% 100%, 0% 95vh);
-  }
-
-  .triangle-overlay2 {
-    position: absolute;
-    z-index: 1;
-
-    width: 80vw;
-    height: 60vh;
-    background-image: linear-gradient(
-      to top,
-      $primary-color-hsla,
-      $secondary-color-hsla
-    );
-    @media all and (orientation: landscape) {
-      width: 98vw;
-    }
-
-    color: black;
-
-    &.icons {
-      background-color: black;
-      width: 2rem;
-      height: 1rem;
-      margin: 1rem 0;
-    }
   }
 
   &__background {
@@ -57,24 +30,56 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(
-        to top,
-        $primary-color-hsla,
-        $secondary-color-hsla
-      ),
+    background-image: linear-gradient(to top,
+      $primary-color-hsla,
+      $secondary-color-hsla),
       url(../img/bmh001.jpg);
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 50%, 50% 0, 100% 0%, 100% 50%, 50% 100%, 0 100%);
+
     @media all and (orientation: landscape) {
       clip-path: polygon(0 25%, 100% 0, 100% 0%, 100% 75%, 0% 100%, 0 100%);
     }
 
     .logo-img {
       z-index: 5;
-      max-width: 32rem;
-      @media all and (max-width: 32rem) {
+
+      height: auto;
+
+
+
+
+      @media all and (max-width: 32rem),
+        (min-height: 30rem) {
         width: 100vw;
+      }
+
+      @media all and (min-width: 50rem),
+      (min-height: 30rem) {
+        max-width: 60rem;
+      }
+
+      @media all and (min-width: 60rem),
+      (min-height: 30rem) {
+        max-width: 70rem;
+      }
+
+
+
+      @media all and (max-width: 30rem),
+      (max-height: 30rem) {
+        max-width: 60rem;
+      }
+
+      @media all and (max-width: 30rem),
+      (max-height: 40rem) {
+        max-width: 70rem;
+      }
+
+      @media all and (max-width: 30rem),
+      (max-height: 50rem) {
+        max-width: 80rem;
       }
     }
   }
